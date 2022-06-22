@@ -11,11 +11,19 @@ jobs:
   windows:
     runs-on: windows-latest
     needs: [ubuntu]
-    name: windows-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
       - name: Print Date
         run: "Get-Date"
+  macos:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout Repository
+      - uses: actions/checkout@v2
+      - name: Print Date
+      - run: date
+
+    
     
   
