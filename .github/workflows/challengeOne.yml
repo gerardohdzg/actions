@@ -16,13 +16,6 @@ jobs:
         uses: actions/checkout@v2
       - name: Print Date
         run: "Get-Date"
-  macos:
-    runs-on: macos-latest
-    steps:
-      - name: Checkout Repository
-      - uses: actions/checkout@v2
-      - name: Print Date
-      - run: date
 
     
     
