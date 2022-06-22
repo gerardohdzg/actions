@@ -1,0 +1,20 @@
+name: first
+on: push
+jobs:
+  job1:
+    name: fisrt Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step one
+        uses: actions/checkout@v2
+      - name: Step two
+        run: env | sort
+  job2:
+    name: second job
+    steps:
+      - name: Step one
+        uses: actions/checkout@v2
+      - name: Step two
+        run: "Get-ChildItem Env: | Sort-Object NAme"
+    runs-on: windows-latest
+  
