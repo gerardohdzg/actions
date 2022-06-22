@@ -11,7 +11,7 @@ jobs:
         run: date "+%H:%M:%S   %d/%m/%y"
   job2:
     runs-on: windows-latest
-    needs: ubuntuJob
+    needs: [ubuntuJob]
     name: windows-latest
     steps:
       - name: Checkout Repository
