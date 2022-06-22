@@ -1,17 +1,16 @@
 name: challengeOne
 on: push
 jobs:
-  job1:
-    name: ubuntuJob
+  ubuntu:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
       - name: Print Date
         run: date "+%H:%M:%S   %d/%m/%y"
-  job2:
+  windows:
     runs-on: windows-latest
-    needs: [ubuntuJob]
+    needs: [ubuntu]
     name: windows-latest
     steps:
       - name: Checkout Repository
